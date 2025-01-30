@@ -3,7 +3,7 @@ name: douban
 on: 
   workflow_dispatch:
   schedule:
-  - cron: "30 * * * *"
+  - cron: "30 7 1 * *"
 
 jobs:
   douban:
@@ -20,7 +20,7 @@ jobs:
         type: movie
         format: csv
         dir: ./data
-  
+
     - name: Commit
       uses: EndBug/add-and-commit@v9
       with:
